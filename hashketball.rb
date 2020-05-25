@@ -190,15 +190,15 @@ def player_numbers(input)
   return output
 end
 
-def player_stats(name)
-   game_hash.each do |location, team_data|
-     
-      team_data[:players].each do |player_name, stats|
-         if player_name == name
-            
-            return stats
-           
-         end
+def player_stats(player_name)
+
+  game_hash.values.each do |team_info|
+    team_info[:players].each do |player|
+      if player.has_value?(player_name)
+         player.delete(:player_name) 
+         return player
       end
-   end
+    end
+  end
+
 end
