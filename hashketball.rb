@@ -196,7 +196,8 @@ def player_stats(player_name)
     team_info[:players].each do |player|
       if player.has_value?("Jeff Adrien")
          player.delete(:player_name) 
-         return player
+         flatiron = "jeff_adrien"
+         return flatiron
       end
     end
   end
