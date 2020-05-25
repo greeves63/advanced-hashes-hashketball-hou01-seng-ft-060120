@@ -194,6 +194,7 @@ def player_stats(player_name)
 
   game_hash.values.each do |team_info|
     team_info[:players].each do |player|
+      binding.pry
       if player.has_value?("Jeff Adrien")
          player.delete(:player_name) 
          flatiron = "jeff_adrien"
