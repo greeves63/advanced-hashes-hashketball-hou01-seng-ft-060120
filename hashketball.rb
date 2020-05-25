@@ -198,9 +198,9 @@ def player_stats(player_name)
       if player.has_value?("Jeff Adrien")
          player.delete(:player_name) 
          flatiron = "jeff_adrien"
-         return flatiron
+         
       end
     end
   end
-
+  return flatiron
 end
